@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="iconBeeFive.png" type="image/x-icon">
+    <title>BeeFive</title>
+</head>
+
+<body>
+    <header>
+        <img src="beeFive (1).png" alt="beeFive" width="100px" height="auto">
+        <nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-list">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#equipe">Equipe</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="fundo">
+        <h1>Bem-vindo à BeeFive</h1>
+        <p><b>Vamos fazer acontecer!</b></p>
+    </section>
+
+    <section id="servicos">
+        <h1>Nossos Serviços</h1>
+
+        <figure>
+            <img src="ImagensTeste/serviços (4).png" alt="landingPages">
+            <figcaption>
+                <h1>Landing Pages</h1>
+                <p>Páginas web modernas, rápidas e criativas do jeitinho que você quiser.</p>
+            </figcaption>
+        </figure>
+
+        <figure>
+            <img src="ImagensTeste/computer-4795762_1280.jpg" alt="sistemasSobMedida">
+            <figcaption>
+                <h1>Sistemas Sob Medida</h1>
+                <p>Desenvolvemos sistemas personalizados, com desempenho, segurança e praticidade.</p>
+            </figcaption>
+        </figure>
+
+        <figure>
+            <img src="ImagensTeste/serviços (2).png" alt="manutencaoSistemas">
+            <figcaption>
+                <h1>Manutenção de Sistemas</h1>
+                <p>Garantimos que seu sistema continue funcionando de forma segura e eficiente.</p>
+            </figcaption>
+        </figure>
+
+        <figure>
+            <img src="ImagensTeste/serviços (3).png" alt="siteInstitucional">
+            <figcaption>
+                <h1>Site Institucional</h1>
+                <p>Apresente sua empresa com clareza, credibilidade e profissionalismo.</p>
+            </figcaption>
+        </figure>
+
+        <figure>
+            <img src="ImagensTeste/serviços (1).png" alt="webDesign">
+            <figcaption>
+                <h1>Web Design</h1>
+                <p>Criamos interfaces bonitas, intuitivas e funcionais.</p>
+            </figcaption>
+        </figure>
+    </section>
+
+    <section id="principios">
+        <h1>Nossos Princípios</h1>
+        <p><strong>Compromisso com a Qualidade</strong></p>
+        <p>Seguimos boas práticas de desenvolvimento, garantindo códigos limpos, seguros e eficientes.</p>
+    </section>
+
+    <section id="sobre">
+        <h1>Sobre a Empresa</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+    </section>
+
+    <section id="equipe">
+        <h1>Sobre a Equipe</h1>
+        <p>Somos cinco graduandos em Engenharia de Software, unidos pela paixão por tecnologia.</p>
+
+        <figure><img src="ImagensTeste/ImagemTeste (1).png" alt="Gabriele"><figcaption>Gabriele</figcaption></figure>
+        <figure><img src="ImagensTeste/ImagemTeste (2).png" alt="Guilherme"><figcaption>Guilherme</figcaption></figure>
+        <figure><img src="ImagensTeste/ImagemTeste (3).png" alt="Gustavo"><figcaption>Gustavo</figcaption></figure>
+        <figure><img src="ImagensTeste/ImagemTeste (5).png" alt="Rian"><figcaption>Rian</figcaption></figure>
+        <figure><img src="ImagensTeste/fotoPerfilTeste.png" alt="Felipe"><figcaption>Felipe</figcaption></figure>
+    </section>
+
+    <section id="projetos">
+        <h1>Projetos Realizados</h1>
+        <figure><img src="ImagensTeste/ExemploPizzaria2024.png" alt="Pizzaria"><p>Pizzaria</p></figure>
+        <figure><img src="ImagensTeste/ListaDeTarefas.png" alt="ListaDeTarefas"><p>Lista de Tarefas</p></figure>
+        <figure><img src="ImagensTeste/dashboard.png" alt="Dashboard"><p>Dashboard Interativo</p></figure>
+        <figure><img src="ImagensTeste/touros.png" alt="Gerenciamento Bovino"><p>Gerenciamento Bovino</p></figure>
+    </section>
+
+    <section id="contato">
+        <h1>Contato</h1>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" placeholder="Seu nome" required><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Seu email" required><br>
+        <label for="whatsapp">WhatsApp:</label>
+        <input type="tel" id="whatsapp" placeholder="(99) 99999-9999" required><br>
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" placeholder="Sua mensagem" required></textarea>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>BeeFive</h3>
+                <p>© 2025 - Todos os direitos reservados</p>
+            </div>
+
+           
+            <div class="footer-col">
+                <h3>Redes Sociais</h3>
+                <p><a href="#">Instagram</a></p>
+                <p><a href="#">LinkedIn</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menu = document.getElementById('mobile-menu');
+        const navList = document.querySelector('.nav-list');
+        menu.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
+
