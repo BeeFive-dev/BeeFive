@@ -12,7 +12,7 @@ header {
     margin: 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     background-color: rgb(255, 213, 0);
 }
 header nav {
@@ -20,7 +20,7 @@ header nav {
 }
 header ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 50px;
 }
 header li {
@@ -28,8 +28,9 @@ header li {
 }
 header a {
     text-decoration: none;
-    color: #000;
+    color: #000000;
     font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
 }
 header a:hover {
     transition: 0.2s;
@@ -90,6 +91,13 @@ header img {
 }
 
 /* Sessões Gerais */
+#principios p{
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    padding: 20px;
+}
 #sobre, #principios, #contato {
     max-width: 600px;
     margin: 0 auto;
@@ -97,16 +105,26 @@ header img {
     color: #000;
     padding: 20px;
 }
-
+#sobre p{
+ max-width: 700px;
+    margin: 0 auto 15px auto;
+    color: #333; 
+    padding: 0 20px;
+    line-height: 1.6;
+    text-align: center;
+}
 /* Equipe */
 #equipe {
     font-family: Arial, Helvetica, sans-serif;
 }
-#equipe p {
-    max-width: 600px;
-    margin: 0 auto;
-    color: #000;
-    padding: 20px;
+#equipetext{
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 700px;
+    margin: 0 auto 15px auto;
+    color: #333; 
+    padding: 0 20px;
+    line-height: 1.6;
+    text-align: center;
 }
 #equipe > figure {
     display: inline-block;
@@ -122,14 +140,27 @@ header img {
     transform: scale(1.2);
     transition: 0.2s;
 }
+.grupo-equipe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: #f5f7fa;
+}
 
+.grupo-equipe img {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
 /* Projetos */
 #projetos {
     font-family: Arial, Helvetica, sans-serif;
 }
 #projetos figure {
     display: inline-block;
-}
+}   
 #projetos img {
     width: 300px;
     height: 200px;
@@ -147,18 +178,26 @@ header img {
     display: flex;
     gap: 10px;
     width: 700px;
+    border-radius: 15px;
     margin: auto;
     margin-bottom: 20px;
     background-color: #ffee00b2;
 }
 #servicos img {
     width: 300px;
+    border-radius: 15px;
     height: auto;
     object-fit: cover;
 }
 #servicos figcaption h1 {
     margin: 0;
+    margin-top: 10px;
     font-size: x-large;
+}
+
+#servicos figcaption p {
+    margin: 10px 15px;
+    text-align: i;
 }
 
 /* Responsividade para Serviços */
@@ -187,6 +226,12 @@ header img {
         width: 60%;
         font-size: small;
     }
+}
+
+#contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Footer */
@@ -229,5 +274,61 @@ footer {
     }
     .footer-col {
         width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/*teste*/
+.grupo-equipe,
+#equipetext {
+    display: inline-block;
+    vertical-align: top; /* melhor alinhamento */
+    width: 40%;
+}
+
+.grupo-equipe {
+    text-align: center;
+    padding: 40px 0px;
+}
+
+.grupo-equipe img {
+    width: 100%;
+    max-width: 620px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+#equipetext {
+    padding: 40px 0px;
+}
+
+
+#equipetext h1 {
+    margin-bottom: 15px;
+}
+
+#equipetext p {
+    line-height: 1.6;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .grupo-equipe,
+    #equipetext {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    #equipetext {
+        padding-top: 10px;
     }
 }
