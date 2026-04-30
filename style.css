@@ -1,0 +1,593 @@
+body {
+    background-color: aliceblue;
+    margin: 0;
+    text-align: center;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Header */
+header {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 213, 0);
+}
+header nav {
+    padding: 20px;
+}
+header ul {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+header li {
+    display: flex;
+}
+header a {
+    text-decoration: none;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+header a:hover {
+    transition: 0.2s;
+    color: #fff;
+}
+header img {
+    max-height: 70px;
+    margin-left: 10px;
+    transform: translateY(-3px);
+}
+
+/* Fundo */
+#fundo {
+    background: linear-gradient(rgba(0,0,0,0.4), rgb(0, 0, 0)),
+                url('ImagensTeste/TesteImagemFundo 2.jpg') top center/cover no-repeat;
+    height: 65vh;
+    padding-top: 30vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+}
+#fundo h1 { color: #fff; }
+#fundo p { color: #Ffd500; }
+
+/* Menu Hamburguer */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    align-items: center;
+}
+.menu-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background-color: #000;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+/* Responsividade Header */
+@media (max-width: 768px) {
+    header { flex-wrap: nowrap; }
+    header nav { position: relative; }
+
+    .nav-list {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: rgb(255, 213, 0);
+        flex-direction: column;
+        width: 200px;
+        text-align: right;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .nav-list li { margin: 10px 0; }
+    .menu-toggle { display: flex; }
+    .nav-list.active { display: flex; align-items: center; font-size: 20px;}
+
+}
+
+/* Sessões Gerais */
+#principios .icone,
+#sobre .icone {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+.bloco-info {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    padding: 40px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bloco-info > section,
+.bloco-info > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.bloco-info > img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    display: block;
+}
+
+#principios {
+    width: 450px;
+}
+
+/* SOBRE */
+#sobre {
+    width: 450px;
+}
+
+#sobre .topo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#sobre .icone {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+    object-fit: contain;
+}
+
+#principios h1,
+#sobre h1 {
+    font-size: 32px;
+    margin: 10px 0 20px 0;
+}
+
+#principios p,
+#sobre p {
+    line-height: 1.6;
+    margin: 10px auto;
+    max-width: 400px;
+    text-align: justify;
+}
+
+@media (max-width: 900px) {
+    .bloco-info {
+        gap: 30px;
+    }
+
+    #principios,
+    #sobre {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .bloco-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #principios p,
+    #sobre p {
+        text-align: center;
+    }
+}
+
+#equipe {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.grupo-equipe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 60px 20px;
+    flex-wrap: wrap; 
+}
+.grupo-equipe img {
+    width: 100%;
+    max-width: 700px; 
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* bloco do texto */
+#equipetext {
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 650px;
+    margin: 0;
+    color: #333;
+    padding: 0 20px;
+    line-height: 1.6;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: center; /* texto centralizado */
+    flex: 1;
+}
+
+/* conteúdo interno */
+#textoequipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#textoequipe p {
+    margin:5px 0;
+}
+
+/* equipe */
+#equipe {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#equipe > figure {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+#equipe img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#equipe > figure:hover {
+    transform: scale(1.2);
+    transition: 0.2s;
+}
+@media (max-width: 900px) {
+
+    .grupo-equipe {
+        flex-direction: column; 
+        gap: 30px;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .grupo-equipe img {
+        max-width: 100%;
+        width: 90%;
+        align-self: center;
+    }
+
+    #equipetext {
+        max-width: 100%;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    #textoequipe {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .grupo-equipe {
+        padding: 30px 15px;
+        gap: 20px;
+    }
+
+    .grupo-equipe img {
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    #equipetext {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}
+/* Projetos */
+#projetos {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+/* Card */
+#projetos figure {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 350px; /* mesmo padrão dos serviços */
+    background-color: #ffee00b2; /* mesmo fundo */
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s ease;
+    margin: 0;
+}
+
+/* Hover */
+#projetos figure:hover {
+    transform: translateY(-5px);
+}
+
+/* Imagem */
+#projetos img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: none; /* 🔥 removi borda preta pra combinar */
+}
+
+/* Texto */
+#projetos p {
+    font-size: 20px;
+    text-align: center;
+    padding: 15px;
+    margin: 0;
+}
+
+/* ===== Responsividade ===== */
+
+@media (max-width: 1024px) {
+    #projetos figure {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    #projetos {
+        gap: 20px;
+        padding: 20px 15px;
+    }
+
+    #projetos figure {
+        max-width: 100%;
+    }
+
+    #projetos img {
+        height: 180px;
+    }
+
+    #projetos p {
+        font-size: 18px;
+    }
+}
+/* Serviços */
+#servicos {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-wrap: wrap; /* 🔥 permite quebrar linha */
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+/* Título geral */
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+}
+
+/* Card */
+#servicos figure {
+    display: flex;
+    flex-direction: column; /* 🔥 imagem em cima texto embaixo */
+    width: 100%;
+    max-width: 350px; /* 🔥 controla tamanho sem travar */
+    border-radius: 15px;
+    background-color: #ffee00b2;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+/* Hover leve */
+#servicos figure:hover {
+    transform: translateY(-5px);
+}
+
+/* Imagem */
+#servicos img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Texto */
+#servicos figcaption {
+    padding: 15px;
+}
+
+#servicos figcaption h1 {
+    margin: 0 0 10px 0;
+    font-size: x-large;
+}
+
+#servicos figcaption p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ===== Responsividade ===== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    #servicos figure {
+        max-width: 300px;
+    }
+}
+
+/* Celular */
+@media (max-width: 600px) {
+    #servicos {
+        gap: 20px;
+        padding: 20px 15px;
+    }
+
+    #servicos figure {
+        max-width: 100%;
+    }
+
+    #servicos img {
+        height: 180px;
+    }
+
+    #servicos figcaption h1 {
+        font-size: large;
+    }
+
+    #servicos figcaption p {
+        font-size: 14px;
+    }
+}
+#contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Footer */
+footer {
+    background-color: #Ffd500;
+    padding: 20px;
+    font-family: 'Inter', sans-serif;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.footer-col {
+    text-align: center;
+}
+.footer-col h3 {
+    margin-bottom: 10px;
+}
+.footer-col a {
+    color: black;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+.footer-col a:hover {
+    font-size: 20px;
+}
+
+/* Footer responsivo */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-col {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+/* Seção */
+#contato {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif; /* fonte aplicada */
+}
+
+/* Form */
+#contato form {
+    width: 100%;
+    max-width: 650px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* Título */
+#contato h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Todas as divs de campo */
+#contato form div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+/* Labels */
+#contato label {
+    width: 110px;
+    font-size: 14px;
+}
+
+/* Inputs */
+#contato input,
+#contato textarea {
+    flex: 1;
+    padding: 7px 10px;
+    border: none;
+    border-radius: 5px;
+    background: #eee;
+    font-size: 14px;
+    outline: none;
+    font-family: Arial, sans-serif; /* garante dentro dos campos */
+}
+
+/* Textarea menor */
+#contato textarea {
+    height: 70px;
+    resize: none;
+}
+
+/* Botão */
+#contato button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #222;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: Arial, sans-serif;
+}
+
+/* Hover */
+#contato button:hover {
+    background: #444;
+}
+
+
+
